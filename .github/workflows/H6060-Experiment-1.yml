@@ -141,8 +141,9 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Create CycloneDX SBOM
+      - name: Create CycloneDX SBOM - ${{ matrix.os }}
         uses: seansmith39/H6060-Experiment-Resources/.github/actions/java/java-cyclonedx-sbom@main
         with:
           build-directory: target
           artifact-name: cyclonedx-sbom-java-${{ matrix.os }}
+
