@@ -87,7 +87,7 @@ jobs:
           java-version: 17
 
       - name: Build Logback Application - ${{ matrix.os }}
-        uses: seansmith39/H6060-Experiment-Resources/.github/actions/java/java-build@main
+        uses: seansmith2600/H6060-Experiment-Resources/.github/actions/java/java-build@main
         with:
           build-command: mvn -Dmaven.test.skip=true clean install
           build-directory: "**/target"
@@ -111,7 +111,7 @@ jobs:
           java-version: 17
 
       - name: Create Dependency Tree - ${{ matrix.os }}
-        uses: seansmith39/H6060-Experiment-Resources/.github/actions/java/java-dependency-tree@main
+        uses: seansmith2600/H6060-Experiment-Resources/.github/actions/java/java-dependency-tree@main
         with:
           artifact-name: dependency-tree-${{ matrix.os }}
 
@@ -142,7 +142,7 @@ jobs:
           java-version: 17
 
       - name: Create CycloneDX SBOM - ${{ matrix.os }}
-        uses: seansmith39/H6060-Experiment-Resources/.github/actions/java/java-cyclonedx-sbom@main
+        uses: seansmith2600/H6060-Experiment-Resources/.github/actions/java/java-cyclonedx-sbom@main
         with:
           build-directory: target
           artifact-name: cyclonedx-sbom-java-${{ matrix.os }}
