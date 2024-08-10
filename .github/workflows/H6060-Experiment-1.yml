@@ -116,7 +116,7 @@ jobs:
           artifact-name: dependency-tree-${{ matrix.os }}
 
   create-cyclonedx-sbom:
-    name: Create CycloneDX Dependency Tree
+    name: Create CycloneDX SBOM
     needs: build-application
     strategy:
       matrix:
