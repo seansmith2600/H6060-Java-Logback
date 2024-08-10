@@ -7,37 +7,37 @@ on:
         description: Enable CodeQL scan (SAST)
         type: boolean
         required: false
-        default: false
+        default: true
 
       sast-horusec-enabled:
         description: Enable Horusec scan (SAST)
         type: boolean
         required: false
-        default: false
+        default: true
 
       sast-semgrep-enabled:
         description: Enable Semgrep scan (SAST)
         type: boolean
         required: false
-        default: false
+        default: true
 
       sast-snyk-code-enabled:
         description: Enable Snyk Code scan (SAST)
         type: boolean
         required: false
-        default: false
+        default: true
 
       sast-sonarqube-enabled:
         description: Enable SonarQube scan (SAST)
         type: boolean
         required: false
-        default: false
+        default: true
 
       sca-eclipse-steady-enabled:
         description: Enable Eclipse Steady scan (SCA)
         type: boolean
         required: false
-        default: false
+        default: true
 
       sca-grype-enabled:
         description: Enable Grype scan (SCA)
@@ -49,19 +49,19 @@ on:
         description: Enable OWASP Dependency Check scan (SCA)
         type: boolean
         required: false
-        default: false
+        default: true
 
       sca-snyk-enabled:
         description: Enable Snyk scan (SCA)
         type: boolean
         required: false
-        default: false
+        default: true
 
       reporting-enabled:
         description: Enable reporting jobs
         type: boolean
         required: false
-        default: false
+        default: true
 
 defaults:
   run:
@@ -149,7 +149,7 @@ jobs:
 
   security_tool_analysis:
     name: Perform Security Tool Analysis
-    uses: seansmith2600/H6060-Experiment-Resources/.github/workflows/experiment-1-java.yml@Update_Experiment_Workflow
+    uses: seansmith2600/H6060-Experiment-Resources/.github/workflows/experiment-1-java.yml@main
     needs: [ create-dependency-tree, create-cyclonedx-sbom ]
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
