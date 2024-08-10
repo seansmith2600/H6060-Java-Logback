@@ -191,7 +191,7 @@ jobs:
       eclipse-steady-project-source-directories: logback-access/src,logback-classic/src,logback-core/src,logback-examples/src
       horusec-files-or-paths-to-ignore: "**/test/**"
       semgrep-files-or-paths-to-ignore: "test"
-      project-name: H6060-Experiment-1-Logback
+      project-name: H6060-Java-Logback
       build-command: "mvn -Dmaven.test.skip=true clean install"
       build-artifact: java-build
       build-directory: target
